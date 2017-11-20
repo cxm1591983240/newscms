@@ -1,5 +1,5 @@
 # newscms
-文章管理系统（基于thinkPHP5框架开发）
+文章管理系统（基于thinkPHP3.2.3框架开发）
 1.加速响应时间&提升服务器性能&搜索引擎的SEO优化
 2.mysqldump+crontab实现数据库一键备份
 3.后台中所有弹出层页面使用第三方js插件layer
