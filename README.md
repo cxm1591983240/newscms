@@ -12,7 +12,7 @@ create table `cms_admin` (
   `username` varchar(20) not null default '',
   `password` varchar(32) not null default '',
   `lastloginip` varchar(15) default '0',
-  `lastlogintime` int(10) unsigned defalut '0',
+  `lastlogintime` int(10) unsigned default '0',
   `email` varchar(40) default '',
   `realname` varchar(50) not null default '',
   `status` tinyint(1) not null default '1',
@@ -23,14 +23,14 @@ create table `cms_admin` (
 2.菜单表
 create table `cms_menu` (
   `menu_id` smallint(6) unsigned not null auto_increment,
-  `name` varchar(40) not null defult '',
+  `name` varchar(40) not null default '',
   `parentid` smallint(6) not null default '0',
   `m` varchar(20) not null default '',
   `c` varchar(20) not null default '',
   `f` varchar(20) not null default '',
   `listorder` smallint(6) unsigned not null default '0',
   `status` tinyint(1) NOT NULL default '1',
-  `type` tinyint(1) unsinged not null default '0',
+  `type` tinyint(1) unsigned not null default '0',
   primary key (`menu_id`),
   key `listorder` (`listorder`),
   key `parentid` (`parentid`),
@@ -51,10 +51,10 @@ create table `cms_news` (
   `status` tinyint(1) not null default '1',
   `copyfrom` varchar(250) default null comment '来源',
   `username` char(20) not null,
-  `create_time` int(10) unsigned not null defaule '0',
+  `create_time` int(10) unsigned not null default '0',
   `update_time` int(10) unsigned not null default '0',
   `count` int(10) unsigned not null default '0',
-  primary key (`menu_id`),
+  primary key (`news_id`),
   key `listorder` (`listorder`),
   key `catid` (`catid`)
 ) engine=myisam auto_increment=1 default charser=utf8;
@@ -71,7 +71,7 @@ create table `cms_news_content` (
 ) engine=myisam auto_increment=1 default charset=utf8;
 
 5.推荐位标识表
-create table `cms_position' (
+create table `cms_position` (
   `id` smallint(5) unsigned not null auto_increment,
   `name` char(30) not null default '',
   `status` tinyint(1) not null default '1',
@@ -96,4 +96,3 @@ create table `cms_position_content` (
   primary key (`id`),
   key `position_id` (`position_id`)
 ) engine=myisam auto_increment=1 default charset=utf8;
-
